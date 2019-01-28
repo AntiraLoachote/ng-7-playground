@@ -1,6 +1,7 @@
 <div class="container h-100">
   <div class="row h-100 justify-content-center align-items-center">
     <form class="col-12 col-md-6" [formGroup]="formGroup">
+      <h2>Login</h2>
       <div class="form-group">
         <input type="text" class="form-control" formControlName="username" [ngClass]="{'is-invalid': userName.invalid && userName.touched}" placeholder="username">
       </div>

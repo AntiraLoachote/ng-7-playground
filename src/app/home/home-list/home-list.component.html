@@ -1,0 +1,18 @@
+
+
+<div class="container h-100">
+  <div class="justify-content-center align-items-center">
+   <div class="row">
+     <div class="col-12 mb-2">
+        <button type="button" class="btn btn-primary float-right d-block" [routerLink]="['/home/create']">Create</button>
+     </div>
+   </div>
+    <div class="card text-left mb-2" *ngFor="let item of [1,2,3,4,5]">
+      <img class="card-img-top" src="holder.js/100px180/" alt="">
+      <div class="card-body">
+        <h4 class="card-title">Title</h4>
+        <p class="card-text">Body</p>
+      </div>
+    </div>
+  </div>
+</div>

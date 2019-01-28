@@ -1,3 +1,5 @@
+import { PostdataModel } from 'src/app/Models/postdata.model';
+import { GetService } from './../../service/api/get.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-list.component.scss']
 })
 export class HomeListComponent implements OnInit {
-
-  constructor() { }
+  dataList = new Array<PostdataModel>();
+  constructor(private getService: GetService) { }
 
   ngOnInit() {
+    this.getService.getData().subscribe(res => {
+      console.log(res);
+      this.dataList = res;
+    });
   }
 
 }

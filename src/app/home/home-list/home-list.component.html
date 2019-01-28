@@ -7,11 +7,20 @@
         <button type="button" class="btn btn-primary float-right d-block" [routerLink]="['/home/create']">Create</button>
      </div>
    </div>
-    <div class="card text-left mb-2" *ngFor="let item of [1,2,3,4,5]">
-      <img class="card-img-top" src="holder.js/100px180/" alt="">
+    <div class="card text-left mb-2" *ngFor="let item of dataList" [routerLink]="['/home/detail',item.id]" routerLinkActive="router-link-active" >
       <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Body</p>
+        <h4 class="card-title">{{item.title}}</h4>
+        <div class="row">
+            <div class="col mr-auto">
+                <p class="card-text">{{item.text}}</p>
+            </div>
+            <div class="col-auto">
+                <p class="card-text">author :
+                  <span *ngIf="item.is_anonymous">anonymous</span>
+                  <span *ngIf="!item.is_anonymous">{{item.author}}</span>
+                </p>
+            </div>
+        </div>
       </div>
     </div>
   </div>

@@ -3,6 +3,6 @@ export class PostdataModel {
   title: string;
   created_date: Date;
   is_anonymous: boolean;
-  author: number;
+  author: number = 1;
   text: string;
 }

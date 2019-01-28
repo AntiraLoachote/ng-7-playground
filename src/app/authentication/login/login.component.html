@@ -1,0 +1,16 @@
+<div class="container h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <form class="col-12 col-md-6" [formGroup]="formGroup">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="username" [ngClass]="{'is-invalid': userName.invalid && userName.touched}" placeholder="username">
+      </div>
+      <div class="form-group">
+
+        <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': passWord.invalid && passWord.touched}" placeholder="password">
+      </div>
+      <div class="form-group float-right">
+        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+      </div>
+    </form>
+  </div>
+</div>
